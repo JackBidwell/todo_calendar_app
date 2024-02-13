@@ -1,0 +1,17 @@
+/* Tasks CSS */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  margin-bottom: 10px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.actions {
+  margin-top: 20px;
+}

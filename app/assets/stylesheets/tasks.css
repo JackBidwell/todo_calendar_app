@@ -1,0 +1,109 @@
+/* app/assets/stylesheets/tasks.css */
+.tasks-container {
+  width: 80%;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  font-size: 18px;
+}
+
+.task-detail {
+  margin: 10px 0;
+}
+
+.task-actions {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+/* Additional CSS for Form Styling */
+.task-form .field {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-check-input {
+  margin-top: 10px;
+}
+
+.errors {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.btn-success {
+  background-color: #28a745;
+}
+
+.actions {
+  margin-top: 20px;
+}
