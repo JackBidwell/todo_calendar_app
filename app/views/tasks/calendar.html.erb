@@ -1,0 +1,12 @@
+<!-- app/views/tasks/calendar.html.erb -->
+<div class="tasks-container">
+  <h1>Task Calendar</h1>
+  <%= calendar @tasks, attribute: :due_date do |date, tasks| %>
+    <%= date %>
+    <ul>
+      <% tasks.each do |task| %>
+        <li><%= task.title %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

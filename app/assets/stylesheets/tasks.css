@@ -1,109 +1,142 @@
-/* app/assets/stylesheets/tasks.css */
-.tasks-container {
-  width: 80%;
-  margin: auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Reset some default styles */
+body, ul, h1, h2, div {
+  margin: 0;
+  padding: 0;
 }
 
-.title {
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
   color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.title {
   font-size: 24px;
+  color: #333;
   margin-bottom: 20px;
 }
 
+/* Task List styles */
 .task-list {
   list-style-type: none;
   padding: 0;
 }
 
 .task-item {
-  border-bottom: 1px solid #eee;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .task-title {
   font-size: 18px;
 }
 
-.task-detail {
-  margin: 10px 0;
+.task-links {
+  text-align: right;
 }
 
-.task-actions {
-  margin-top: 20px;
-}
-
+/* Button styles */
 .btn {
-  padding: 8px 15px;
   text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  margin-right: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-right: 5px;
   color: #fff;
-  font-size: 14px;
-}
-
-.btn-primary {
   background-color: #007bff;
 }
 
-.btn-info {
-  background-color: #17a2b8;
-}
+.btn-info { background-color: #17a2b8; }
+.btn-warning { background-color: #ffc107; }
+.btn-danger { background-color: #dc3545; }
+.btn-secondary { background-color: #6c757d; }
 
-.btn-warning {
-  background-color: #ffc107;
-}
-
-.btn-danger {
-  background-color: #dc3545;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-}
-
-/* Additional CSS for Form Styling */
-.task-form .field {
-  margin-bottom: 15px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-control {
+/* General calendar styles */
+.simple-calendar {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  margin: 20px auto;
+  border-collapse: collapse;
 }
 
-.form-check-input {
-  margin-top: 10px;
+.simple-calendar thead th {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  text-transform: uppercase;
 }
 
-.errors {
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-  color: #721c24;
+.simple-calendar tbody td {
   padding: 10px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  background-color: #fff;
+}
+
+.simple-calendar tbody td.today {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.simple-calendar tbody td div {
+  margin-top: 5px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  text-align: center;
   border-radius: 4px;
+  padding: 5px 0;
+  font-size: 0.85em;
+}
+
+.simple-calendar tbody td:hover {
+  background-color: #f0f0f0;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .simple-calendar {
+    font-size: 0.85em;
+  }
+  .simple-calendar tbody td {
+    padding: 5px;
+  }
+  .simple-calendar tbody td div {
+    padding: 3px 0;
+  }
+}
+
+/* Calendar navigation styles */
+.calendar-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.btn-success {
-  background-color: #28a745;
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.actions {
-  margin-top: 20px;
+.calendar-nav a {
+  background: none;
+  color: #000;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.calendar-nav a:hover {
+  background-color: #f0f0f0;
 }

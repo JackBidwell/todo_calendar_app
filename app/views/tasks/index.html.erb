@@ -4,7 +4,7 @@
   <div class="task-actions">
     <%= link_to 'New Task', new_task_path, class: "btn btn-primary" %>
   </div>
-  
+
   <ul class="task-list">
     <% @tasks.each do |task| %>
       <li class="task-item">
@@ -17,4 +17,16 @@
       </li>
     <% end %>
   </ul>
-</div>
+  
+  <div class="calendar-container">
+    <h2 class="title">Calendar</h2>
+    <%= calendar do |date| %>
+      <%= date %>
+      <ul>
+        <% @calendar_tasks.where(due_date: date).each do |task| %>
+          <li><%= task.title %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  
